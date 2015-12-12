@@ -26,10 +26,19 @@
           <argument>
             <kind>1</kind>
             <string>///Create the arrays of food based on level
-makefood = true;
-pushfood = false;
-global.ConveyorQueue = ds_list_create();
-scr_makeNewFood();
+
+enum conState {
+    normal,
+    makefood,
+    deletefood
+}
+
+ConveyorQueue = ds_list_create();
+
+//INITIALIZED TO NULL
+//Should be initialized by Room object creating it.
+Foodstuff[0,0] = 0;
+
 </string>
           </argument>
         </arguments>
@@ -92,13 +101,34 @@ scr_makeNewFood();
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( ds_list_size(global.ConveyorQueue) &gt;= 1 &amp;&amp; pushfood == false){
+            <string>
+//Input: 1 if EAT, 2 if SLAP 
+var input = scr_get_input();
+
+if( ds_list_size(ConveyorQueue) &lt; 10 ) {
+    scr_makeNewFood(id);
+}
+
+if( input == 1 ){
+    scr_deleteFood(ConveyorQueue);
+    scr_pushFoodUp(ConveyorQueue);
+}
+
+if( input == 2 ){
+    scr_deleteFood(ConveyorQueue);
+    scr_pushFoodUp(ConveyorQueue);
+}
+
+
+/*
+
+if( ds_list_size(global.ConveyorQueue) &gt;= 1 &amp;&amp; pushfood == false){
 
     input = scr_get_input();
     
@@ -139,7 +169,7 @@ if (makefood){
 if( ds_list_size(global.ConveyorQueue) &gt;= 10){
     makefood = false;
     alarm[0]=-1;
-}
+}*/
 </string>
           </argument>
         </arguments>

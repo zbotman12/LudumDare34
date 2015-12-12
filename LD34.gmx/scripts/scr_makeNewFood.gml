@@ -1,5 +1,15 @@
-for(var i = 0; i < ds_list_size(global.ConveyorQueue); i++){
-    var foodInstance = ds_list_find_value(global.ConveyorQueue, i);
-    foodInstance.x += 32;
-}
-ds_list_add(global.ConveyorQueue, instance_create(0,room_height-500, obj_pizza));
+
+//Takes conveyor as an argument
+conveyor = argument0.ConveyorQueue;
+
+//Sends the food array to script, which processes it and returns a stringvalue
+var test = scr_getFoodIndex(argument0.Foodstuff);
+var testId = instance_create( ((ds_list_size(conveyor) - 1) * 32), 200, test );
+
+//Adds new food to Food list
+ds_list_add(conveyor, testId);
+
+
+
+
+
