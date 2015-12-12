@@ -117,12 +117,12 @@ if( ds_list_size(ConveyorQueue) &lt; 10 ) {
 
 if( input == 1 ){
     scr_deleteFood(ConveyorQueue);
-    scr_pushFoodUp(ConveyorQueue);
+    scr_pushFoodUp(id);
 }
 
 if( input == 2 ){
     scr_deleteFood(ConveyorQueue);
-    scr_pushFoodUp(ConveyorQueue);
+    scr_pushFoodUp(id);
 }
 
 

@@ -33,9 +33,16 @@ global.r_foodstuff[2,0] = obj_pizza;
 global.r_foodstuff[3,0] = obj_barf;
 global.r_foodstuff[4,0] = obj_barf;
 
-conveyor = instance_create( 20, 400, obj_conveyor );
+global.SPACING_CONST = 100;
+global.MOVE_CONST = 10;
+global.CURVE_AMPLITUDE = 400;
 
+//INITIALIZE CONVEYOR
+conveyor = instance_create( x, y, obj_conveyor );
 conveyor.Foodstuff = global.r_foodstuff;
+
+//CREATE POSITION ARRAY
+global.POSITION_ARRAY = scr_getCosCurve(conveyor, global.SPACING_CONST, global.CURVE_AMPLITUDE);
 
 </string>
           </argument>
