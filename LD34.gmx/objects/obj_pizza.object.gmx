@@ -32,6 +32,7 @@ event_inherited();
 //dicks
 fatnessMultiplier = 1;
 poisonMultiplier = 0;
+depth = 0;
 
 </string>
           </argument>
@@ -58,6 +59,7 @@ poisonMultiplier = 0;
             <string>draw_sprite_ext(sprite_index, 0, x + 2, y +2, 1, 1, 0, c_black, 0.45);
 draw_self();
 draw_text_colour(x, y - 50, "Dicks", c_white, c_white, c_white,c_white , 1);
+
 </string>
           </argument>
         </arguments>

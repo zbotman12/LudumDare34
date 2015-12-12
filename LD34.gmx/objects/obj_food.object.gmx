@@ -32,6 +32,8 @@ poisonMultiplier = 0;
 moveToX = x;
 moveToY = y;
 
+platter = instance_create( x, y + 40, obj_platter );
+
 </string>
           </argument>
         </arguments>
@@ -54,7 +56,9 @@ moveToY = y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( x != moveToX ){
+            <string>///Step (MoveTo)
+
+if( x != moveToX ){
 
 
     if( x - global.MOVE_CONST &lt; moveToX ) {
