@@ -5,10 +5,27 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_pizza</sprite>
+    <sprite>sprites\spr_barf</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <shaders name="shaders"/>
+  <scripts name="scripts">
+    <script>scripts\scr_get_input.gml</script>
+    <script>scripts\scr_InitFoodArray.gml</script>
+    <script>scripts\scr_makeNewFood.gml</script>
+    <script>scripts\scr_pushFoodUp.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\obj_food</object>
+    <object>objects\obj_pizza</object>
+    <object>objects\obj_barf</object>
+    <object>objects\obj_conveyor</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\level_1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
