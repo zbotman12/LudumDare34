@@ -21,8 +21,10 @@
     <script>scripts\scr_getFoodIndex.gml</script>
     <script>scripts\script5.gml</script>
     <script>scripts\scr_deleteFood.gml</script>
-    <script>scripts\scr_getCosCurve.gml</script>
     <script>scripts\scr_updateFoodPlatterPosition.gml</script>
+    <script>scripts\scr_getCosCurve.gml</script>
+    <script>scripts\scr_getSinCurve.gml</script>
+    <script>scripts\scr_getSinCurve2.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_food</object>

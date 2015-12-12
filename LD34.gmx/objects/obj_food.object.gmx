@@ -58,6 +58,8 @@ platter = instance_create( x, y + 40, obj_platter );
             <kind>1</kind>
             <string>///Step (MoveTo)
 
+///Step (MoveTo)
+
 if( x != moveToX ){
 
 
@@ -67,8 +69,9 @@ if( x != moveToX ){
     else {
         x -= global.MOVE_CONST;
     }
-    
-    
+}
+
+if( y != moveToY ) {
     if( y - global.MOVE_CONST &lt; moveToY ) {
         y = moveToY;
     }
@@ -76,7 +79,6 @@ if( x != moveToX ){
         y -= global.MOVE_CONST/2;
     }
 }
-
 </string>
           </argument>
         </arguments>

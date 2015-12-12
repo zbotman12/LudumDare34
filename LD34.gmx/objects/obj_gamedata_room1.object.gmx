@@ -38,12 +38,21 @@ global.MOVE_CONST = 10;
 global.CURVE_AMPLITUDE = 400;
 global.PLATE_SPACING = 40;
 
+global.ROOM_POISON = 0;
+global.ROOM_FAT = 0;
+
+has_won = false;
+has_lost = false;
+
 //INITIALIZE CONVEYOR
 conveyor = instance_create( x, y, obj_conveyor );
 conveyor.Foodstuff = global.r_foodstuff;
 
 //CREATE POSITION ARRAY
 global.POSITION_ARRAY = scr_getCosCurve(conveyor, global.SPACING_CONST, global.CURVE_AMPLITUDE);
+global.POS_ARRAY_EAT = scr_getSinCurve2(10, 300);
+global.POS_ARRAY_FLIP = scr_getSinCurve(23, 200);
+
 
 </string>
           </argument>
