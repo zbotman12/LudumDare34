@@ -14,6 +14,8 @@
     <sprite>sprites\spr_xbutton</sprite>
     <sprite>sprites\spr_zbutton</sprite>
     <sprite>sprites\spr_table</sprite>
+    <sprite>sprites\spr_fatbar</sprite>
+    <sprite>sprites\spr_poisonbar</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -28,6 +30,7 @@
     <script>scripts\scr_getCosCurve.gml</script>
     <script>scripts\scr_getSinCurve.gml</script>
     <script>scripts\scr_getSinCurve2.gml</script>
+    <script>scripts\scr_applyFood.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_food</object>
@@ -40,6 +43,8 @@
     <object>objects\obj_zbutton</object>
     <object>objects\obj_xbutton</object>
     <object>objects\obj_table</object>
+    <object>objects\obj_fatbar</object>
+    <object>objects\obj_poisonbar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\level_1</room>

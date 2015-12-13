@@ -107,6 +107,8 @@ conveyor.Foodstuff = global.r_foodstuff;
 otable = instance_create ( 500, 680, obj_table );
 zbut = instance_create( 430, 690, obj_zbutton );
 xbut = instance_create( 570, 690, obj_xbutton );
+fatbar = instance_create( 900, 336, obj_fatbar );
+poisonbar = instance_create( 950, 336, obj_poisonbar );
 
 //CREATE POSITION ARRAY
 global.POSITION_ARRAY = scr_getCosCurve(conveyor, global.SPACING_CONST, global.CURVE_AMPLITUDE);
