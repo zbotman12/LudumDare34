@@ -8,6 +8,9 @@
   <sprites name="sprites">
     <sprite>sprites\spr_pizza</sprite>
     <sprite>sprites\spr_barf</sprite>
+    <sprite>sprites\spr_solid_data</sprite>
+    <sprite>sprites\spr_platter</sprite>
+    <sprite>sprites\spr_dude</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -16,12 +19,22 @@
     <script>scripts\scr_InitFoodArray.gml</script>
     <script>scripts\scr_makeNewFood.gml</script>
     <script>scripts\scr_pushFoodUp.gml</script>
+    <script>scripts\scr_getFoodIndex.gml</script>
+    <script>scripts\script5.gml</script>
+    <script>scripts\scr_deleteFood.gml</script>
+    <script>scripts\scr_updateFoodPlatterPosition.gml</script>
+    <script>scripts\scr_getCosCurve.gml</script>
+    <script>scripts\scr_getSinCurve.gml</script>
+    <script>scripts\scr_getSinCurve2.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_food</object>
     <object>objects\obj_pizza</object>
     <object>objects\obj_barf</object>
     <object>objects\obj_conveyor</object>
+    <object>objects\obj_gamedata_room1</object>
+    <object>objects\obj_platter</object>
+    <object>objects\obj_dude</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\level_1</room>

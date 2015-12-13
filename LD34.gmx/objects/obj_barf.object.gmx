@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///Instantiate food
+
+event_inherited();
+
+//dicks
 fatnessMultiplier = 0;
 poisonMultiplier = 1;
 </string>
