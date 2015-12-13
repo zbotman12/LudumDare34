@@ -103,6 +103,11 @@ has_lost = false;
 conveyor = instance_create( x, y, obj_conveyor );
 conveyor.Foodstuff = global.r_foodstuff;
 
+//INITIALIZE BUTTONS
+otable = instance_create ( 500, 680, obj_table );
+zbut = instance_create( 430, 690, obj_zbutton );
+xbut = instance_create( 570, 690, obj_xbutton );
+
 //CREATE POSITION ARRAY
 global.POSITION_ARRAY = scr_getCosCurve(conveyor, global.SPACING_CONST, global.CURVE_AMPLITUDE);
 global.POS_ARRAY_EAT = scr_getSinCurve2(10, 300);

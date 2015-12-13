@@ -26,6 +26,9 @@ with(foodInstance){
         dude.moveToX = -100;
         dude.moveToY = dude.y;
     }
+    
+    //TODO(clark): implement meters
+    
     instance_destroy();    
 }
 
