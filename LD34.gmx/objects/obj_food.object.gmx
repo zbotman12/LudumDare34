@@ -32,6 +32,7 @@ poisonMultiplier = 0;
 moveToX = x;
 moveToY = y;
 
+depth = 3;
 
 dude = instance_create( x - global.DUDE_SPACING_X, y + global.DUDE_SPACING_Y, obj_dude );
 platter = instance_create( x, y + global.PLATE_SPACING, obj_platter );

@@ -33,6 +33,8 @@ enum dudestate {
     happy
 }
 
+dudeColor = global.color_map[irandom_range(0,9)];
+
 DudeState = dudestate.normal;
 
 subimg = 0;
@@ -44,7 +46,7 @@ moveToY = y;
 step1 = false;
 step2 = false;
 
-depth = 2;
+depth = 5;
 </string>
           </argument>
         </arguments>
@@ -69,6 +71,8 @@ depth = 2;
             <kind>1</kind>
             <string>///STEP (moveTo)
 switch(DudeState){
+
+    //NORMAL STATE
     case dudestate.normal:
         subimg = 0;
         if( x != moveToX ){
@@ -89,6 +93,8 @@ switch(DudeState){
             }
         }
         break;
+    
+    //WALKING STATE
     case dudestate.walking:
         if( x != moveToX ){
             if( x - global.MOVE_CONST &lt; moveToX ) {
@@ -124,9 +130,70 @@ switch(DudeState){
         }
         
         break;
+        
+    //SAD STATE
     case dudestate.sad:
+        animation_count++;        
+        if(animation_count &gt; 14){
+            animation_count = 0;
+        }
+        subimg = global.dude_sad_ani[animation_count];
+        
+        if( x != moveToX ){
+            if( x - global.MOVE_CONST &lt; moveToX ) {
+                x = moveToX;
+            }
+            else {
+                x -= global.MOVE_CONST;
+            }
+        }
+
+        if( y != moveToY ) {
+            if( y + global.MOVE_CONST_Y &gt; moveToY ) {
+                y = moveToY;
+            }
+            else {
+                y += global.MOVE_CONST_Y * 1.5;
+            }
+        }
+        
+        if( x == moveToX )
+        {
+            instance_destroy();
+        }
+        
         break;
+        
+    //HAPPY STATE
     case dudestate.happy:
+    animation_count++;        
+        if(animation_count &gt; 7){
+            animation_count = 0;
+        }
+        subimg = global.dude_hap_ani[animation_count];
+        
+        if( x != moveToX ){
+            if( x - global.MOVE_CONST * 2&lt; moveToX ) {
+                x = moveToX;
+            }
+            else {
+                x -= global.MOVE_CONST * 2;
+            }
+        }
+
+        if( y != moveToY ) {
+            if( y + global.MOVE_CONST_Y * 2 &gt; moveToY ) {
+                y = moveToY;
+            }
+            else {
+                y += global.MOVE_CONST_Y * 2;
+            }
+        }
+        
+        if ( x == moveToX ) {
+            instance_destroy();
+        }   
+        
         break;
 }
 </string>
@@ -152,7 +219,7 @@ switch(DudeState){
           <argument>
             <kind>1</kind>
             <string>///OVERRIDDEN DRAW EVENT
-draw_sprite(sprite_index, subimg, x, y);
+draw_sprite_ext(sprite_index, subimg, x, y, image_xscale, image_yscale, image_angle, dudeColor, image_alpha);
 </string>
           </argument>
         </arguments>

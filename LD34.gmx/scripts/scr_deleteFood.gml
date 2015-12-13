@@ -11,13 +11,24 @@ with(foodInstance){
     platter.inix = platter.x;
     platter.iniy = platter.y;
     if( mode = 0 ){
+        //Send plate on destruct sequence
         platter.State = platestate.shoot;
-        dude.DudeState = dudestate.sad;
+        //Send dude on destruct sequence
+        dude.DudeState = dudestate.happy;
+        dude.moveToX = -100;
+        dude.moveToY = dude.y;
     }
     if( mode = 1 ){
+        //Send plate on destruct sequence
         platter.State = platestate.flippy;
-        dude.DudeState = dudestate.happy;
+        //Send dude on destruct sequence
+        dude.DudeState = dudestate.sad;
+        dude.moveToX = -100;
+        dude.moveToY = dude.y;
     }
+    
+    //TODO(clark): implement meters
+    
     instance_destroy();    
 }
 

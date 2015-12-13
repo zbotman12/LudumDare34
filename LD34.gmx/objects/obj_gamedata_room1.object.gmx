@@ -33,7 +33,20 @@ global.r_foodstuff[2,0] = obj_pizza;
 global.r_foodstuff[3,0] = obj_barf;
 global.r_foodstuff[4,0] = obj_barf;
 
+//INIT COLOR MAP ARRAY
+global.color_map[0] = c_aqua;
+global.color_map[1] = c_blue;
+global.color_map[2] = c_fuchsia;
+global.color_map[3] = c_lime;
+global.color_map[4] = c_olive;
+global.color_map[5] = c_purple;
+global.color_map[6] = c_red;
+global.color_map[7] = c_teal;
+global.color_map[8] = c_yellow;
+global.color_map[9] = c_white;
+
 //INIT ANIMATION ARRAYS
+//INIT DUDE WALK ANI
 global.dude_walk_ani[0] = 0;
 global.dude_walk_ani[1] = 1;
 global.dude_walk_ani[2] = 2;
@@ -43,23 +56,33 @@ global.dude_walk_ani[5] = 3;
 global.dude_walk_ani[6] = 4;
 global.dude_walk_ani[7] = 3;
 
+//INIT DUDE HAPPY ANI
+global.dude_hap_ani[0] = 10;
+global.dude_hap_ani[1] = 11;
+global.dude_hap_ani[2] = 12;
+global.dude_hap_ani[3] = 11;
+global.dude_hap_ani[4] = 10;
+global.dude_hap_ani[5] = 13;
+global.dude_hap_ani[6] = 14;
+global.dude_hap_ani[7] = 13;
+
 //INIT DUDE SAD ANI
-global.dude_walk_ani[0] = 0;
-global.dude_walk_ani[1] = 1;
-global.dude_walk_ani[2] = 2;
-global.dude_walk_ani[3] = 1;
-global.dude_walk_ani[4] = 0;
-global.dude_walk_ani[5] = 3;
-global.dude_walk_ani[6] = 4;
-global.dude_walk_ani[7] = 3;
-global.dude_walk_ani[8] = 0;
-global.dude_walk_ani[9] = 1;
-global.dude_walk_ani[10] = 2;
-global.dude_walk_ani[11] = 1;
-global.dude_walk_ani[12] = 0;
-global.dude_walk_ani[13] = 3;
-global.dude_walk_ani[14] = 4;
-global.dude_walk_ani[15] = 3;
+global.dude_sad_ani[0] = 5;
+global.dude_sad_ani[1] = 5;
+global.dude_sad_ani[2] = 6;
+global.dude_sad_ani[3] = 6;
+global.dude_sad_ani[4] = 7;
+global.dude_sad_ani[5] = 7;
+global.dude_sad_ani[6] = 6;
+global.dude_sad_ani[7] = 6;
+global.dude_sad_ani[8] = 5;
+global.dude_sad_ani[9] = 5;
+global.dude_sad_ani[10] = 8;
+global.dude_sad_ani[11] = 8;
+global.dude_sad_ani[12] = 9;
+global.dude_sad_ani[13] = 9;
+global.dude_sad_ani[14] = 8;
+global.dude_sad_ani[15] = 8;
 
 global.SPACING_CONST = 100;
 global.MOVE_CONST = 10;
@@ -79,6 +102,13 @@ has_lost = false;
 //INITIALIZE CONVEYOR
 conveyor = instance_create( x, y, obj_conveyor );
 conveyor.Foodstuff = global.r_foodstuff;
+
+//INITIALIZE BUTTONS
+otable = instance_create ( 500, 680, obj_table );
+zbut = instance_create( 430, 690, obj_zbutton );
+xbut = instance_create( 570, 690, obj_xbutton );
+fatbar = instance_create( 900, 336, obj_fatbar );
+poisonbar = instance_create( 950, 336, obj_poisonbar );
 
 //CREATE POSITION ARRAY
 global.POSITION_ARRAY = scr_getCosCurve(conveyor, global.SPACING_CONST, global.CURVE_AMPLITUDE);

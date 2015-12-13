@@ -20,6 +20,11 @@
     <sprite>sprites\spr_platter</sprite>
     <sprite>sprites\spr_dude</sprite>
     <sprite>sprites\spr_menufinger</sprite>
+    <sprite>sprites\spr_xbutton</sprite>
+    <sprite>sprites\spr_zbutton</sprite>
+    <sprite>sprites\spr_table</sprite>
+    <sprite>sprites\spr_fatbar</sprite>
+    <sprite>sprites\spr_poisonbar</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -31,13 +36,13 @@
     <script>scripts\scr_makeNewFood.gml</script>
     <script>scripts\scr_pushFoodUp.gml</script>
     <script>scripts\scr_getFoodIndex.gml</script>
-    <script>scripts\script5.gml</script>
     <script>scripts\scr_deleteFood.gml</script>
     <script>scripts\scr_updateFoodPlatterPosition.gml</script>
     <script>scripts\scr_getCosCurve.gml</script>
     <script>scripts\scr_getSinCurve.gml</script>
     <script>scripts\scr_getSinCurve2.gml</script>
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_applyFood.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_blackandwhite.shader</shader>
@@ -56,6 +61,11 @@
     <object>objects\obj_fatking</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_pause</object>
+    <object>objects\obj_zbutton</object>
+    <object>objects\obj_xbutton</object>
+    <object>objects\obj_table</object>
+    <object>objects\obj_fatbar</object>
+    <object>objects\obj_poisonbar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title_screen</room>
