@@ -9,10 +9,16 @@
     <sprite>sprites\spr_pizza</sprite>
     <sprite>sprites\spr_barf</sprite>
     <sprite>sprites\spr_solid_data</sprite>
+    <sprites name="King">
+      <sprite>sprites\spr_king_eat</sprite>
+      <sprite>sprites\spr_king_belly</sprite>
+      <sprite>sprites\spr_king_smack</sprite>
+      <sprite>sprites\spr_king_idle1</sprite>
+      <sprite>sprites\spr_king_scratch2</sprite>
+      <sprite>sprites\spr_king_scratch1</sprite>
+    </sprites>
     <sprite>sprites\spr_platter</sprite>
     <sprite>sprites\spr_dude</sprite>
-    <sprite>sprites\spr_king_eat</sprite>
-    <sprite>sprites\spr_king_belly</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
