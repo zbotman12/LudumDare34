@@ -32,7 +32,9 @@ poisonMultiplier = 0;
 moveToX = x;
 moveToY = y;
 
-platter = instance_create( x, y + 40, obj_platter );
+
+dude = instance_create( x - global.DUDE_SPACING_X, y + global.DUDE_SPACING_Y, obj_dude );
+platter = instance_create( x, y + global.PLATE_SPACING, obj_platter );
 
 </string>
           </argument>
@@ -72,11 +74,11 @@ if( x != moveToX ){
 }
 
 if( y != moveToY ) {
-    if( y - global.MOVE_CONST &lt; moveToY ) {
+    if( y - global.MOVE_CONST_Y &lt; moveToY ) {
         y = moveToY;
     }
     else {
-        y -= global.MOVE_CONST/2;
+        y -= global.MOVE_CONST_Y;
     }
 }
 </string>

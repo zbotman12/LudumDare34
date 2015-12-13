@@ -12,9 +12,11 @@ with(foodInstance){
     platter.iniy = platter.y;
     if( mode = 0 ){
         platter.State = platestate.shoot;
+        dude.DudeState = dudestate.sad;
     }
     if( mode = 1 ){
         platter.State = platestate.flippy;
+        dude.DudeState = dudestate.happy;
     }
     instance_destroy();    
 }

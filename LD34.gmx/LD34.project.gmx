@@ -10,6 +10,7 @@
     <sprite>sprites\spr_barf</sprite>
     <sprite>sprites\spr_solid_data</sprite>
     <sprite>sprites\spr_platter</sprite>
+    <sprite>sprites\spr_dude</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -33,6 +34,7 @@
     <object>objects\obj_conveyor</object>
     <object>objects\obj_gamedata_room1</object>
     <object>objects\obj_platter</object>
+    <object>objects\obj_dude</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\level_1</room>

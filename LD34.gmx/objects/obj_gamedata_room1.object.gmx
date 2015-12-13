@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>//INIT FOOD ARRAYS
 global.r_foodstuff[0,0] = obj_pizza;
 global.r_foodstuff[0,1] = obj_pizza;
 global.r_foodstuff[1,0] = obj_pizza;
@@ -33,10 +33,42 @@ global.r_foodstuff[2,0] = obj_pizza;
 global.r_foodstuff[3,0] = obj_barf;
 global.r_foodstuff[4,0] = obj_barf;
 
+//INIT ANIMATION ARRAYS
+global.dude_walk_ani[0] = 0;
+global.dude_walk_ani[1] = 1;
+global.dude_walk_ani[2] = 2;
+global.dude_walk_ani[3] = 1;
+global.dude_walk_ani[4] = 0;
+global.dude_walk_ani[5] = 3;
+global.dude_walk_ani[6] = 4;
+global.dude_walk_ani[7] = 3;
+
+//INIT DUDE SAD ANI
+global.dude_walk_ani[0] = 0;
+global.dude_walk_ani[1] = 1;
+global.dude_walk_ani[2] = 2;
+global.dude_walk_ani[3] = 1;
+global.dude_walk_ani[4] = 0;
+global.dude_walk_ani[5] = 3;
+global.dude_walk_ani[6] = 4;
+global.dude_walk_ani[7] = 3;
+global.dude_walk_ani[8] = 0;
+global.dude_walk_ani[9] = 1;
+global.dude_walk_ani[10] = 2;
+global.dude_walk_ani[11] = 1;
+global.dude_walk_ani[12] = 0;
+global.dude_walk_ani[13] = 3;
+global.dude_walk_ani[14] = 4;
+global.dude_walk_ani[15] = 3;
+
 global.SPACING_CONST = 100;
 global.MOVE_CONST = 10;
+global.MOVE_CONST_Y = 4;
 global.CURVE_AMPLITUDE = 400;
 global.PLATE_SPACING = 40;
+global.DUDE_SPACING_X = 20;
+global.DUDE_SPACING_Y = 180;
+
 
 global.ROOM_POISON = 0;
 global.ROOM_FAT = 0;
