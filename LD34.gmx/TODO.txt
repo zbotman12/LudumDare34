@@ -1,0 +1,6 @@
+TODO(clark):
+	create win state
+	Create lose state
+	Createmore food
+	dicks
+	create sprites for eating and slapping (CURRENT)

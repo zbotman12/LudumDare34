@@ -30,6 +30,10 @@
 fatness  = 0;
 poison = 0;
 
+//INIT POSITIONS
+x = 528;
+y = 480;
+
 bellyScale = 0;
 </string>
           </argument>

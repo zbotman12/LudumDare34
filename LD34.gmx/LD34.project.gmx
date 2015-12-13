@@ -52,8 +52,6 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_food</object>
-    <object>objects\obj_pizza</object>
-    <object>objects\obj_barf</object>
     <object>objects\obj_conveyor</object>
     <object>objects\obj_gamedata_room1</object>
     <object>objects\obj_platter</object>
@@ -66,10 +64,15 @@
     <object>objects\obj_table</object>
     <object>objects\obj_fatbar</object>
     <object>objects\obj_poisonbar</object>
+    <objects name="obj_foods">
+      <object>objects\obj_barf</object>
+      <object>objects\obj_pizza</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title_screen</room>
     <room>rooms\level_1</room>
+    <room>rooms\rm_win_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
