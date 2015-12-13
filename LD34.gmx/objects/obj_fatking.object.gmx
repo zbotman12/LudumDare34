@@ -54,8 +54,7 @@ bellyScale = 0;
           <argument>
             <kind>1</kind>
             <string>///Calculate belly fatness
-
-fatness = 0;//global.ROOM_FAT;
+fatness = global.ROOM_FAT;
 poison = global.ROOM_POISON;
 
 bellyScale = 0.3 + fatness * 0.01;

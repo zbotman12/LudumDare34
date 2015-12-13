@@ -67,8 +67,7 @@ depth = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string> 
-///Step (MoveTo)
+            <string>///Step (MoveTo)
 
 switch(State){
     case platestate.normal:

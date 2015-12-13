@@ -67,7 +67,7 @@ depth = 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//STEP (moveTo)
+            <string>///STEP (moveTo)
 switch(DudeState){
     case dudestate.normal:
         subimg = 0;

@@ -85,7 +85,7 @@ global.POSITION_ARRAY = scr_getCosCurve(conveyor, global.SPACING_CONST, global.C
 global.POS_ARRAY_EAT = scr_getSinCurve2(10, 300);
 global.POS_ARRAY_FLIP = scr_getSinCurve(23, 200);
 
-
+global.pause=false;
 </string>
           </argument>
         </arguments>

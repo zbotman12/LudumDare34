@@ -59,9 +59,6 @@ platter = instance_create( x, y + global.PLATE_SPACING, obj_platter );
           <argument>
             <kind>1</kind>
             <string>///Step (MoveTo)
-
-///Step (MoveTo)
-
 if( x != moveToX ){
 
 
