@@ -53,6 +53,7 @@
     <sprite>sprites\spr_poisonpart</sprite>
     <sprite>sprites\spr_frame</sprite>
     <sprite>sprites\spr_gameover</sprite>
+    <sprite>sprites\spr_youwin</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -144,6 +145,7 @@
       <object>objects\obj_loadingObj</object>
       <object>objects\obj_timer</object>
       <object>objects\obj_gameover</object>
+      <object>objects\obj_youwin</object>
     </objects>
     <object>objects\obj_frame</object>
   </objects>

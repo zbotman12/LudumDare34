@@ -39,6 +39,7 @@ State = conState.loading;
 //INIT SPLASH
 LoadingSplash = instance_create( 512, 384, obj_loadingObj );
 LosingSplash = instance_create( 512, 384, obj_gameover);
+WinningSplash = instance_create(512, 384, obj_youwin);
 //INIT TIMER
 GameTimer = instance_create( 700, 50, obj_timer );
 GameTimer.mins = 0;
@@ -124,9 +125,16 @@ switch(State){
         }
         break;
     case conState.winning:
+        WinningSplash.visible = true;
+        WinningSplash.canrun = true;
         
+        //turn off audio
         audio_stop_all();
-        room_goto(rm_title_screen);
+        
+        if(WinningSplash.finished == true){
+            with(WinningSplash){ instance_destroy(); }
+            room_goto(rm_title_screen);
+        }
         break;
 }
 
