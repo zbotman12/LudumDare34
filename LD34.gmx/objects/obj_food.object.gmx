@@ -29,6 +29,11 @@
 fatnessMultiplier = 0;
 poisonMultiplier = 0;
 
+//bool member indicating what splash is placed upon eating
+//  0 - bad;
+//  1 - good;
+bool_isgood = 0;
+
 moveToX = x;
 moveToY = y;
 

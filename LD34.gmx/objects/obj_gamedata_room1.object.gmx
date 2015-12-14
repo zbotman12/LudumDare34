@@ -19,7 +19,7 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>obj_gamedata_room1</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -28,8 +28,8 @@
             <string>//INIT FOOD ARRAYS
 global.r_foodstuff[0,0] = obj_pizza;
 global.r_foodstuff[0,1] = obj_pizza;
-global.r_foodstuff[1,0] = obj_pizza;
-global.r_foodstuff[2,0] = obj_pizza;
+global.r_foodstuff[1,0] = obj_barf;
+global.r_foodstuff[2,0] = obj_barf;
 global.r_foodstuff[3,0] = obj_barf;
 global.r_foodstuff[4,0] = obj_barf;
 
@@ -96,8 +96,8 @@ global.DUDE_SPACING_Y = 180;
 global.ROOM_POISON = 0;
 global.ROOM_FAT = 0;
 
-has_won = false;
-has_lost = false;
+global.has_won = false;
+global.has_lost = false;
 
 //INITIALIZE CONVEYOR
 conveyor = instance_create( x, y, obj_conveyor );
@@ -116,6 +116,49 @@ global.POS_ARRAY_EAT = scr_getSinCurve2(20, 300);
 global.POS_ARRAY_FLIP = scr_getSinCurve(23, 200);
 
 global.pause=false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///CHECKS WIN STATE
+//TODO(clark): ENCAPSULATE INTO SCRIPT
+
+if( global.ROOM_FAT &gt;= 100)
+{
+    global.has_won = true;
+}
+
+if( global.ROOM_POISON &gt;= 100)
+{
+    global.has_lost = true;
+}
+
+if( global.has_won )
+{
+    room_goto(rm_win_room);
+} 
+if( global.has_lost ) 
+{
+    room_goto(rm_lose_room);
+}
 </string>
           </argument>
         </arguments>

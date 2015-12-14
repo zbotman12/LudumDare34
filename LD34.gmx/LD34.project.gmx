@@ -6,8 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_pizza</sprite>
-    <sprite>sprites\spr_barf</sprite>
     <sprite>sprites\spr_solid_data</sprite>
     <sprites name="King">
       <sprite>sprites\spr_king_eat</sprite>
@@ -25,6 +23,16 @@
     <sprite>sprites\spr_table</sprite>
     <sprite>sprites\spr_fatbar</sprite>
     <sprite>sprites\spr_poisonbar</sprite>
+    <sprites name="spr_eats">
+      <sprite>sprites\spr_gross</sprite>
+      <sprite>sprites\spr_bigx</sprite>
+      <sprite>sprites\spr_yum</sprite>
+    </sprites>
+    <sprites name="spr_foods">
+      <sprite>sprites\spr_pizza</sprite>
+      <sprite>sprites\spr_barf</sprite>
+    </sprites>
+    <sprite>sprites\spr_strlight</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -41,8 +49,14 @@
     <script>scripts\scr_getCosCurve.gml</script>
     <script>scripts\scr_getSinCurve.gml</script>
     <script>scripts\scr_getSinCurve2.gml</script>
-    <script>scripts\scr_menu.gml</script>
     <script>scripts\scr_applyFood.gml</script>
+    <scripts name="scr_eats">
+      <script>scripts\scr_applyEatsplash.gml</script>
+    </scripts>
+    <scripts name="scr_menus">
+      <script>scripts\scr_winmenu.gml</script>
+      <script>scripts\scr_menu.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_blackandwhite.shader</shader>
@@ -51,28 +65,46 @@
     <font>fonts\fnt_menu</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_food</object>
-    <object>objects\obj_conveyor</object>
     <object>objects\obj_gamedata_room1</object>
-    <object>objects\obj_platter</object>
-    <object>objects\obj_dude</object>
     <object>objects\obj_fatking</object>
-    <object>objects\obj_menu</object>
     <object>objects\obj_pause</object>
-    <object>objects\obj_zbutton</object>
-    <object>objects\obj_xbutton</object>
-    <object>objects\obj_table</object>
-    <object>objects\obj_fatbar</object>
-    <object>objects\obj_poisonbar</object>
     <objects name="obj_foods">
+      <object>objects\obj_food</object>
       <object>objects\obj_barf</object>
       <object>objects\obj_pizza</object>
+    </objects>
+    <objects name="obj_eats">
+      <object>objects\obj_gross</object>
+      <object>objects\obj_yum</object>
+      <object>objects\obj_bigx</object>
+      <object>objects\obj_eats</object>
+    </objects>
+    <objects name="obj_conveyor">
+      <object>objects\obj_platter</object>
+      <object>objects\obj_dude</object>
+      <object>objects\obj_conveyor</object>
+    </objects>
+    <objects name="obj_buttons">
+      <object>objects\obj_zbutton</object>
+      <object>objects\obj_table</object>
+      <object>objects\obj_xbutton</object>
+    </objects>
+    <objects name="obj_menus">
+      <object>objects\obj_menu</object>
+      <object>objects\obj_winmenu</object>
+    </objects>
+    <objects name="obj_uistuff">
+      <object>objects\obj_poisonbar</object>
+      <object>objects\obj_fatbar</object>
+      <object>objects\obj_loadingObj</object>
+      <object>objects\obj_timer</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title_screen</room>
     <room>rooms\level_1</room>
     <room>rooms\rm_win_room</room>
+    <room>rooms\rm_lose_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

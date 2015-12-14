@@ -46,7 +46,7 @@ moveToY = y;
 step1 = false;
 step2 = false;
 
-depth = 5;
+depth = 6;
 </string>
           </argument>
         </arguments>

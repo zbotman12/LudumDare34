@@ -44,7 +44,7 @@ subimg = 0;
 moveToX = x;
 moveToY = y;
 
-depth = 4;
+depth = 5;
 </string>
           </argument>
         </arguments>

@@ -29,10 +29,19 @@
 
 enum conState {
     normal,
-    makefood,
-    deletefood
+    loading,
 }
 
+State = conState.loading;
+
+//INIT SPLASH
+LoadingSplash = instance_create( 512, 384, obj_loadingObj );
+//INIT TIMER
+GameTimer = instance_create( 700, 50, obj_timer );
+GameTimer.mins = 1;
+GameTimer.secs = 0;
+GameTimer.mils = 0.000;
+//INIT CONVEYOR
 ConveyorQueue = ds_list_create();
 
 //INITIALIZED TO NULL
@@ -62,22 +71,37 @@ Foodstuff[0,0] = 0;
           <argument>
             <kind>1</kind>
             <string>//Input: 1 if EAT, 2 if SLAP 
-var input = scr_get_input();
+
 
 if( ds_list_size(ConveyorQueue) &lt; 10 ) {
     scr_makeNewFood(id);
 }
 
-if( input == 1 ){
-    scr_applyFood(ConveyorQueue);
-    scr_deleteFood(ConveyorQueue, 0);
-    scr_pushFoodUp(id);
+switch(State){
+    case conState.loading:
+        if( LoadingSplash.finished == true ){
+            State = conState.normal;
+            GameTimer.canupdate = true;
+            with(LoadingSplash) { instance_destroy(); }
+        }
+        break;
+    case conState.normal:
+        var input = scr_get_input();
+        
+        if( input == 1 ){
+            scr_applyFood(ConveyorQueue);
+            scr_deleteFood(ConveyorQueue, 0);
+            scr_pushFoodUp(id);
+        }
+        
+        if( input == 2 ){
+            scr_deleteFood(ConveyorQueue, 1);
+            scr_pushFoodUp(id);
+        }
+        break;
 }
 
-if( input == 2 ){
-    scr_deleteFood(ConveyorQueue, 1);
-    scr_pushFoodUp(id);
-}
+
 </string>
           </argument>
         </arguments>

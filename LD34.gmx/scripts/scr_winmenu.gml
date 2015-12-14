@@ -1,4 +1,6 @@
-switch (mpos)
+dis = argument0;
+
+switch (dis)
 {
     case 0:
         {
@@ -6,14 +8,6 @@ switch (mpos)
             break;
         }
     case 1: 
-        {
-            break;
-        }
-    case 2:
-        {
-            break;
-        }
-    case 3: 
         {
             game_end();
             break;

@@ -27,8 +27,9 @@ with(foodInstance){
         dude.moveToY = dude.y;
     }
     
-    //TODO(clark): implement meters
-    
+    //TODO(clark) implement little splashes
+    scr_applyEatsplash(id, mode);
+        
     instance_destroy();    
 }
 
