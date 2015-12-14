@@ -29,7 +29,7 @@
 
 enum conState {
     normal,
-    loading,
+    loading
 }
 
 State = conState.loading;

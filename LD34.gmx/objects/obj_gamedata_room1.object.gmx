@@ -43,7 +43,7 @@ global.r_foodstuff[3,0] = obj_poishroom;
 global.r_foodstuff[3,1] = obj_velvetcake;
 //OHSHIT FOODS
 global.r_foodstuff[4,0] = obj_marshroom;
-global.r_foodstuff[4,0] = obj_psnbot;
+global.r_foodstuff[4,1] = obj_psnbot;
 
 //INIT COLOR MAP ARRAY
 global.color_map[0] = c_aqua;
@@ -104,6 +104,9 @@ global.PLATE_SPACING = 40;
 global.DUDE_SPACING_X = 20;
 global.DUDE_SPACING_Y = 180;
 
+global.FRAME_X = 200;
+global.FRAME_Y = 680;
+
 
 global.ROOM_POISON = 0;
 global.ROOM_FAT = 0;
@@ -121,6 +124,7 @@ zbut = instance_create( 430, 690, obj_zbutton );
 xbut = instance_create( 570, 690, obj_xbutton );
 fatbar = instance_create( 900, 336, obj_fatbar );
 poisonbar = instance_create( 950, 336, obj_poisonbar );
+frame = instance_create( global.FRAME_X, global.FRAME_Y, obj_frame);
 
 //CREATE POSITION ARRAY
 global.POSITION_ARRAY = scr_getCosCurve(conveyor, global.SPACING_CONST, global.CURVE_AMPLITUDE);

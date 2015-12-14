@@ -9,14 +9,14 @@ var mode = argument1;
 if(mode == 0)
 {
     if ( foodthing.bool_isgood == 1 ){
-        instance_create( foodthing.x, foodthing.y, obj_yum);
+        instance_create( global.FRAME_X, global.FRAME_Y, obj_yum);
     }
     if ( foodthing.bool_isgood == 0){
-        instance_create( foodthing.x, foodthing.y, obj_gross);
+        instance_create( global.FRAME_X, global.FRAME_Y, obj_gross);
     }
 }
 if( mode == 1 )
 {
-    instance_create( foodthing.x, foodthing.y, obj_bigx );
+    instance_create( global.FRAME_X, global.FRAME_Y, obj_bigx );
 }
 
