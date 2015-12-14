@@ -54,6 +54,7 @@
     <sprite>sprites\spr_frame</sprite>
     <sprite>sprites\spr_gameover</sprite>
     <sprite>sprites\spr_youwin</sprite>
+    <sprite>sprites\spr_credit</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -136,8 +137,8 @@
     <objects name="obj_menus">
       <object>objects\obj_menu</object>
       <object>objects\obj_winmenu</object>
-      <object>objects\obj_credits</object>
       <object>objects\obj_buttonssel</object>
+      <object>objects\obj_cred</object>
     </objects>
     <objects name="obj_uistuff">
       <object>objects\obj_poisonbar</object>

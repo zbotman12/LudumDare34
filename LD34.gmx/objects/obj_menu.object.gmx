@@ -29,10 +29,12 @@
 menu[1] = "Credits";
 menu[2] = "Quit";
 
-depth = 1;
+depth = 2;
 
 space = 65;
 mpos = 0;
+
+global.creds = instance_create(x + 420, y + 200, obj_cred);
 
 audio_play_sound(snd_menumusic, 10, false);
 </string>

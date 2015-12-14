@@ -43,7 +43,7 @@ WinningSplash = instance_create(512, 384, obj_youwin);
 //INIT TIMER
 GameTimer = instance_create( 700, 50, obj_timer );
 GameTimer.mins = 0;
-GameTimer.secs = 30;
+GameTimer.secs = 45;
 GameTimer.mils = 0.000;
 //INIT CONVEYOR
 ConveyorQueue = ds_list_create();
@@ -99,7 +99,7 @@ switch(State){
         
         if (audioplay == false){
             audioplay = true;
-            audio_play_sound(sng_maingameloop, 10, false);
+            audio_play_sound(sng_maingameloop, 10, true);
         }
         
         if( input == 1 ){

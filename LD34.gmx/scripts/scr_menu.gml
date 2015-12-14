@@ -7,6 +7,7 @@ switch (mpos)
         }
     case 1: 
         {
+            global.creds.visible = !global.creds.visible;
             break;
         }
     case 2:
