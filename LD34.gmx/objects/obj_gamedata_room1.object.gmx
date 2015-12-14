@@ -169,7 +169,7 @@ if( global.has_won )
 } 
 if( global.has_lost ) 
 {
-    room_goto(rm_lose_room);
+    conveyor.State = conState.losing;
 }
 </string>
           </argument>
