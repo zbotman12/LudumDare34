@@ -45,6 +45,7 @@
     </sprites>
     <sprite>sprites\spr_strlight</sprite>
     <sprite>sprites\spr_frame</sprite>
+    <sprite>sprites\spr_gameover</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -131,6 +132,7 @@
       <object>objects\obj_fatbar</object>
       <object>objects\obj_loadingObj</object>
       <object>objects\obj_timer</object>
+      <object>objects\obj_gameover</object>
     </objects>
     <object>objects\obj_frame</object>
   </objects>
