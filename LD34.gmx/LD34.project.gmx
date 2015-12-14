@@ -12,8 +12,6 @@
       <sprite>sprites\spr_king_belly</sprite>
       <sprite>sprites\spr_king_smack</sprite>
       <sprite>sprites\spr_king_idle1</sprite>
-      <sprite>sprites\spr_king_scratch2</sprite>
-      <sprite>sprites\spr_king_scratch1</sprite>
     </sprites>
     <sprite>sprites\spr_platter</sprite>
     <sprite>sprites\spr_dude</sprite>
@@ -44,6 +42,7 @@
       <sprite>sprites\spr_fish</sprite>
     </sprites>
     <sprite>sprites\spr_strlight</sprite>
+    <sprite>sprites\spr_poisonpart</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
