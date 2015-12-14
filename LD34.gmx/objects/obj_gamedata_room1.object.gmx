@@ -130,7 +130,7 @@ frame = instance_create( global.FRAME_X, global.FRAME_Y, obj_frame);
 global.POSITION_ARRAY = scr_getCosCurve(conveyor, global.SPACING_CONST, global.CURVE_AMPLITUDE);
 global.POS_ARRAY_EAT = scr_getSinCurve2(20, 300);
 global.POS_ARRAY_FLIP = scr_getSinCurve(23, 200);
-
+//PAUSE
 global.pause=false;
 </string>
           </argument>

@@ -54,6 +54,9 @@ barscale = 0;
             <string>///CHANGES BAR SCALE
 //PERCENTAGE
 barscale = -(global.ROOM_FAT/100);
+if(barscale &lt; -1){
+barscale = -1;
+}
 </string>
           </argument>
         </arguments>

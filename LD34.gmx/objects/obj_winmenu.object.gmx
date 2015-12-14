@@ -63,7 +63,7 @@ if (move != 0)
     if (mpos &gt; array_length_1d(mnu) -1) mpos = 0;
 }
 
-if (keyboard_check_pressed(ord("X"))) scr_menu(mpos);
+if (keyboard_check_pressed(ord("X"))) scr_winmenu(mpos);
 </string>
           </argument>
         </arguments>

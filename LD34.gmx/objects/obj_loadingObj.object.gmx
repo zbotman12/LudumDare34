@@ -35,8 +35,8 @@ enum lodstate {
 colour = c_red;
 
 textspace = -100;
-textscale = 3.5;
-imgscale = 3;
+textscale = 1;
+imgscale = 1;
 
 TICK_CONST = 60;
 subimg = 0;
@@ -128,7 +128,7 @@ switch(State)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(fnt_menu);
+            <string>draw_set_font(fnt_start);
 
 ///OVERRIDDEN DRAW FUNCTION
 draw_text_transformed_colour(x + 5 + textspace, y + 5, textdis, textscale, textscale, image_angle, c_black, c_black, c_black, c_black, 0.4);

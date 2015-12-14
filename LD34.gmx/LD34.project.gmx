@@ -16,8 +16,6 @@
       <sprite>sprites\spr_king_belly</sprite>
       <sprite>sprites\spr_king_smack</sprite>
       <sprite>sprites\spr_king_idle1</sprite>
-      <sprite>sprites\spr_king_scratch2</sprite>
-      <sprite>sprites\spr_king_scratch1</sprite>
     </sprites>
     <sprite>sprites\spr_platter</sprite>
     <sprite>sprites\spr_dude</sprite>
@@ -48,11 +46,16 @@
       <sprite>sprites\spr_fish</sprite>
     </sprites>
     <sprite>sprites\spr_strlight</sprite>
+<<<<<<< HEAD
+    <sprite>sprites\spr_poisonpart</sprite>
+=======
     <sprite>sprites\spr_frame</sprite>
     <sprite>sprites\spr_gameover</sprite>
+>>>>>>> 4a40f58f32bb77e95c09ee2555c7eb530a40fa7b
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -80,6 +83,7 @@
   </shaders>
   <fonts name="fonts">
     <font>fonts\fnt_menu</font>
+    <font>fonts\fnt_start</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_gamedata_room1</object>
