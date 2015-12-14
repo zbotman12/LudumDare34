@@ -29,7 +29,7 @@
 //COMMON FOODS
 global.r_foodstuff[0,0] = obj_pizza;
 global.r_foodstuff[0,1] = obj_pizza;
-global.r_foodstuff[0,2] = obj_barf;
+global.r_foodstuff[0,2] = obj_fish;
 //UNCOMMON FOODS
 global.r_foodstuff[1,0] = obj_burger;
 global.r_foodstuff[1,1] = obj_celery;

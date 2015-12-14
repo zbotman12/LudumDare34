@@ -59,7 +59,7 @@ rndstring = "";
 
 if(canupdate)
 {
-    mils -= (delta_time/10000);
+    mils -= (delta_time/20000);
     
     if(mils &lt; 0)
     {

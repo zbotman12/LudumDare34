@@ -38,8 +38,8 @@ State = conState.loading;
 LoadingSplash = instance_create( 512, 384, obj_loadingObj );
 //INIT TIMER
 GameTimer = instance_create( 700, 50, obj_timer );
-GameTimer.mins = 1;
-GameTimer.secs = 0;
+GameTimer.mins = 0;
+GameTimer.secs = 30;
 GameTimer.mils = 0.000;
 //INIT CONVEYOR
 ConveyorQueue = ds_list_create();

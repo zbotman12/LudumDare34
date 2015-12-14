@@ -93,7 +93,7 @@ switch(State)
             colour = c_green;
             subimg = 2;
             sprscl = 0;
-            textdis = "Go!!"
+            textdis = "EAT!!"
         }
         break;
     case lodstate.go:
