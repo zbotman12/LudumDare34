@@ -32,36 +32,11 @@ event_inherited();
 //dicks
 fatnessMultiplier = 1;
 poisonMultiplier = 0;
-depth = 0;
+
 //bool member indicating what splash is placed upon eating
 //  0 - bad;
 //  1 - good;
 bool_isgood = 1;
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index, 0, x + 2, y +2, 1, 1, 0, c_black, 0.45);
-draw_self();
 
 </string>
           </argument>
