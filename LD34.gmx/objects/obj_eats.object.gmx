@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///INIT
 anilength = 0;
-depth = 4;
+depth = 0;
 </string>
           </argument>
         </arguments>

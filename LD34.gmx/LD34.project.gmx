@@ -42,7 +42,12 @@
       <sprite>sprites\spr_fish</sprite>
     </sprites>
     <sprite>sprites\spr_strlight</sprite>
+<<<<<<< HEAD
     <sprite>sprites\spr_poisonpart</sprite>
+=======
+    <sprite>sprites\spr_frame</sprite>
+    <sprite>sprites\spr_gameover</sprite>
+>>>>>>> 4a40f58f32bb77e95c09ee2555c7eb530a40fa7b
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -131,7 +136,9 @@
       <object>objects\obj_fatbar</object>
       <object>objects\obj_loadingObj</object>
       <object>objects\obj_timer</object>
+      <object>objects\obj_gameover</object>
     </objects>
+    <object>objects\obj_frame</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title_screen</room>
