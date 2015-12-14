@@ -46,6 +46,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -73,6 +74,7 @@
   </shaders>
   <fonts name="fonts">
     <font>fonts\fnt_menu</font>
+    <font>fonts\fnt_start</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_gamedata_room1</object>

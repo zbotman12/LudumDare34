@@ -53,6 +53,9 @@ barscale = 0;
             <string>///CHANGE BAR VALUE
 
 barscale = -(global.ROOM_POISON/100);
+if(barscale &lt; -1){
+barscale = -1;
+}
 </string>
           </argument>
         </arguments>

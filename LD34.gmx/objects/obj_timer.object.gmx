@@ -114,6 +114,7 @@ rndstring += string(secs) + ':' + string(mils);
             <kind>1</kind>
             <string>///OVERRIDDEN DRAW FUNC
 //Does not display sprite
+draw_set_font(fnt_menu);
 draw_text_colour(x + 5, y + 5, rndstring, c_black, c_black, c_black, c_black, 0.4);
 draw_text_colour(x, y, rndstring, c_gray, c_gray, c_red, c_red, 1);
 </string>

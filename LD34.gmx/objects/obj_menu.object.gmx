@@ -93,11 +93,14 @@ draw_set_valign(fa_middle);
 draw_set_font(fnt_menu);
 draw_set_color(c_red);
 
+draw_set_alpha(0.5);
+draw_rectangle_colour(100, 100, room_width - 100, room_height - 100, c_black, c_black, c_purple, c_purple, false);
+draw_set_alpha(1);
 var m;
 for (m =0; m &lt; array_length_1d(menu); m += 1)
 {
     draw_text_colour(x + space + 5, y +(m * space) + 5,string(menu[m]), c_black, c_black, c_black, c_black, 0.4);
-    draw_text_colour(x + space, y +(m * space),string(menu[m]), c_white, c_white, c_blue, c_blue, 1);
+    draw_text_colour(x + space, y +(m * space),string(menu[m]), c_aqua, c_aqua, c_white, c_white, 1);
     
 }
 

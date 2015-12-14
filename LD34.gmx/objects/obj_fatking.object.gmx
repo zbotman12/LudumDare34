@@ -37,6 +37,9 @@ y = 480;
 bellyScale = 0;
 input=0;
 purpleness = 0;
+loadtime = 180;
+hoverAmount= 0;
+up = true;
 
 //PARTICLE SYSTEM
 partSystem = part_system_create();
@@ -112,11 +115,29 @@ part_system_destroy(partSystem);
           <argument>
             <kind>1</kind>
             <string>///Calculate belly fatness
+
+
+if (hoverAmount == -25){
+    up=true;
+}
+
+if (hoverAmount == 25){
+    up=false;
+}
+
+if(up)
+{
+    hoverAmount++;
+}else{
+    hoverAmount--;
+}
+
 fatness = global.ROOM_FAT;
 poison = global.ROOM_POISON;
 
-bellyScale = 0.3 + fatness * 0.01;
+bellyScale = 0.34 + fatness * 0.01;
 
+if(loadtime == 0){
 input = scr_get_input();
 
 if (input == 1 &amp;&amp; sprite_index != spr_king_eat){
@@ -165,6 +186,9 @@ purpleness = 4;
 if(global.ROOM_POISON &lt; 10){
 part_emitter_stream(partSystem, emitter, p1, 0);
 purpleness = 0;
+}
+}else{
+loadtime--;
 }
 </string>
           </argument>
@@ -215,10 +239,10 @@ part_system_destroy(partSystem);
             <kind>1</kind>
             <string>///Draw king and belly
 
-draw_sprite_ext(spr_king_belly, 0, x, (y + bellyScale * 100) - 30, bellyScale, bellyScale, image_angle, c_white, image_alpha);
-draw_sprite_ext(spr_king_belly, 0, x, (y + bellyScale * 100) - 30, bellyScale, bellyScale, image_angle, c_purple, purpleness * 0.2);
-draw_self();
-draw_sprite_ext(sprite_index, image_index, x,y, image_xscale, image_yscale, image_angle, c_purple, purpleness * 0.2);
+draw_sprite_ext(spr_king_belly, 0, x, (((y + bellyScale * 100) - 30) + (hoverAmount - 10)) - 10, bellyScale, bellyScale, image_angle, c_white, image_alpha);
+draw_sprite_ext(spr_king_belly, 0, x, (((y + bellyScale * 100) - 30) + (hoverAmount - 10)) - 10, bellyScale, bellyScale, image_angle, c_purple, purpleness * 0.2);
+draw_sprite_ext(sprite_index, image_index, x,y + hoverAmount, image_xscale, image_yscale, image_angle, c_white, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x,y + hoverAmount, image_xscale, image_yscale, image_angle, c_purple, purpleness * 0.2);
 </string>
           </argument>
         </arguments>
