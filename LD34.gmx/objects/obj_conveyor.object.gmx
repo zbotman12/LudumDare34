@@ -30,7 +30,8 @@
 enum conState {
     normal,
     loading,
-    losing
+    losing,
+    winning
 }
 
 State = conState.loading;
@@ -49,6 +50,9 @@ ConveyorQueue = ds_list_create();
 //INITIALIZED TO NULL
 //Should be initialized by Room object creating it.
 Foodstuff[0,0] = 0;
+
+audioplay = false;
+
 
 
 
@@ -92,6 +96,11 @@ switch(State){
     case conState.normal:
         var input = scr_get_input();
         
+        if (audioplay == false){
+            audioplay = true;
+            audio_play_sound(sng_maingameloop, 10, false);
+        }
+        
         if( input == 1 ){
             scr_applyFood(ConveyorQueue);
             scr_deleteFood(ConveyorQueue, 0);
@@ -106,10 +115,18 @@ switch(State){
     case conState.losing:
         LosingSplash.visible = true;
         LosingSplash.canrun = true;
+        //turn off audio
+        audio_stop_all();
+        
         if(LosingSplash.finished == true){
             with(LosingSplash){ instance_destroy(); }
             room_goto(rm_lose_room);
         }
+    case conState.winning:
+        
+        audio_stop_all();
+        room_goto(rm_win_room);
+        break;
 }
 
 

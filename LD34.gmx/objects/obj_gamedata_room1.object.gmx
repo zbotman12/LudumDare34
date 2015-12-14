@@ -169,7 +169,7 @@ if( global.ROOM_POISON &gt;= 100)
 
 if( global.has_won )
 {
-    room_goto(rm_win_room);
+    conveyor.State = conState.winning;
 } 
 if( global.has_lost ) 
 {
