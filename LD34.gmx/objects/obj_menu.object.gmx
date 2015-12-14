@@ -33,10 +33,44 @@ depth = 2;
 
 space = 65;
 mpos = 0;
+k = 0;
+z = 0;
+meepSpeed = 1;
+subimg = 10;
 
 global.creds = instance_create(x + 420, y + 200, obj_cred);
 
+global.color_map[0] = c_aqua;
+global.color_map[1] = c_blue;
+global.color_map[2] = c_fuchsia;
+global.color_map[3] = c_lime;
+global.color_map[4] = c_olive;
+global.color_map[5] = c_purple;
+global.color_map[6] = c_red;
+global.color_map[7] = c_teal;
+global.color_map[8] = c_yellow;
+global.color_map[9] = c_white;
+
+global.dude_hap_ani[0] = 10;
+global.dude_hap_ani[1] = 11;
+global.dude_hap_ani[2] = 12;
+global.dude_hap_ani[3] = 11;
+global.dude_hap_ani[4] = 10;
+global.dude_hap_ani[5] = 13;
+global.dude_hap_ani[6] = 14;
+global.dude_hap_ani[7] = 13;
+
+
 audio_play_sound(snd_menumusic, 10, false);
+
+for(i = 0; i &lt; 4; i++){
+    meepSpawn[i] = irandom_range(10, room_width - 10);
+    meepColor[i] = global.color_map[irandom_range(0,9)];
+    meepScale[i] = choose(-1,1);
+    meepMove[i] = 0;
+    meepIndex[i] = 10;
+    meepGo[i] = meepSpawn[i];
+}
 </string>
           </argument>
         </arguments>
@@ -71,6 +105,33 @@ if (move != 0)
 }
 
 if (keyboard_check_pressed(ord("X"))) scr_menu();
+
+
+meepMove[k] += meepScale[k];
+meepGo[k] -= (meepMove[k] * meepSpeed);
+
+if((meepGo[k] &gt;= room_width + 200) || (meepGo[k] &lt;= -200))
+{
+    meepScale[k] = -1 * meepScale[k];
+    meepMove[k] = 0;
+    meepGo[k] = choose(room_width + 60, -60);
+}
+
+if (z &lt; array_length_1d(global.dude_hap_ani)){
+    subimg = global.dude_hap_ani[floor(z)];
+    z += 0.2;
+}else{
+    z = 0;
+}
+
+if(k &lt; array_length_1d(meepMove) - 1){
+    k++;
+}else{
+    k = 0;
+}
+
+
+
 </string>
           </argument>
         </arguments>
@@ -98,9 +159,15 @@ draw_set_valign(fa_middle);
 draw_set_font(fnt_menu);
 draw_set_color(c_red);
 
+for(i = 0; i &lt; array_length_1d(meepSpawn); i++){
+        draw_sprite_ext(spr_dude, subimg, meepGo[i], room_height - 50, meepScale[i], image_yscale, image_angle, meepColor[i], image_alpha);
+}
+
 draw_set_alpha(0.5);
 draw_rectangle_colour(100, 100, room_width - 100, room_height - 100, c_black, c_black, c_purple, c_purple, false);
 draw_set_alpha(1);
+
+
 var m;
 for (m =0; m &lt; array_length_1d(menu); m += 1)
 {
