@@ -26,12 +26,24 @@
           <argument>
             <kind>1</kind>
             <string>//INIT FOOD ARRAYS
+//COMMON FOODS
 global.r_foodstuff[0,0] = obj_pizza;
 global.r_foodstuff[0,1] = obj_pizza;
-global.r_foodstuff[1,0] = obj_barf;
-global.r_foodstuff[2,0] = obj_barf;
-global.r_foodstuff[3,0] = obj_barf;
-global.r_foodstuff[4,0] = obj_barf;
+global.r_foodstuff[0,2] = obj_barf;
+//UNCOMMON FOODS
+global.r_foodstuff[1,0] = obj_burger;
+global.r_foodstuff[1,1] = obj_celery;
+global.r_foodstuff[1,2] = obj_chicken;
+//RARE FOODS
+global.r_foodstuff[2,0] = obj_tbone;
+global.r_foodstuff[2,1] = obj_bone;
+global.r_foodstuff[2,2] = obj_SALAD;
+//MYTHIC FOODS
+global.r_foodstuff[3,0] = obj_poishroom;
+global.r_foodstuff[3,1] = obj_velvetcake;
+//OHSHIT FOODS
+global.r_foodstuff[4,0] = obj_marshroom;
+global.r_foodstuff[4,0] = obj_psnbot;
 
 //INIT COLOR MAP ARRAY
 global.color_map[0] = c_aqua;

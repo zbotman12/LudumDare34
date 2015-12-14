@@ -31,6 +31,16 @@
     <sprites name="spr_foods">
       <sprite>sprites\spr_pizza</sprite>
       <sprite>sprites\spr_barf</sprite>
+      <sprite>sprites\spr_bone</sprite>
+      <sprite>sprites\spr_burger</sprite>
+      <sprite>sprites\spr_celery</sprite>
+      <sprite>sprites\spr_chicken</sprite>
+      <sprite>sprites\spr_marshroom</sprite>
+      <sprite>sprites\spr_poishroom</sprite>
+      <sprite>sprites\spr_psnbot</sprite>
+      <sprite>sprites\spr_SALAD</sprite>
+      <sprite>sprites\spr_tbone</sprite>
+      <sprite>sprites\spr_velvetcake</sprite>
     </sprites>
     <sprite>sprites\spr_strlight</sprite>
   </sprites>
@@ -70,8 +80,28 @@
     <object>objects\obj_pause</object>
     <objects name="obj_foods">
       <object>objects\obj_food</object>
-      <object>objects\obj_barf</object>
-      <object>objects\obj_pizza</object>
+      <objects name="common">
+        <object>objects\obj_pizza</object>
+        <object>objects\obj_barf</object>
+      </objects>
+      <objects name="uncommon">
+        <object>objects\obj_burger</object>
+        <object>objects\obj_chicken</object>
+        <object>objects\obj_celery</object>
+      </objects>
+      <objects name="rare">
+        <object>objects\obj_tbone</object>
+        <object>objects\obj_SALAD</object>
+        <object>objects\obj_bone</object>
+      </objects>
+      <objects name="mythic">
+        <object>objects\obj_poishroom</object>
+        <object>objects\obj_velvetcake</object>
+      </objects>
+      <objects name="ohshit">
+        <object>objects\obj_marshroom</object>
+        <object>objects\obj_psnbot</object>
+      </objects>
     </objects>
     <objects name="obj_eats">
       <object>objects\obj_gross</object>

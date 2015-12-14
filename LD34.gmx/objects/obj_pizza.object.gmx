@@ -62,7 +62,6 @@ bool_isgood = 1;
             <kind>1</kind>
             <string>draw_sprite_ext(sprite_index, 0, x + 2, y +2, 1, 1, 0, c_black, 0.45);
 draw_self();
-draw_text_colour(x, y - 50, "Dicks", c_white, c_white, c_white,c_white , 1);
 
 </string>
           </argument>
