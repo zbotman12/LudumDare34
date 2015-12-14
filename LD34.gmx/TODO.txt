@@ -1,3 +1,4 @@
 TODO(clark):
 	Createmore food	(CURRENT)
 	FIX QUIT BUG ON LOSE/WIN SCREEN
+	Fix FAT METER!

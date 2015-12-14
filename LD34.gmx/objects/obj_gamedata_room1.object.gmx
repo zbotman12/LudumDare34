@@ -114,6 +114,10 @@ global.ROOM_FAT = 0;
 global.has_won = false;
 global.has_lost = false;
 
+//Stops main menu music
+audio_stop_all();
+
+
 //INITIALIZE CONVEYOR
 conveyor = instance_create( x, y, obj_conveyor );
 conveyor.Foodstuff = global.r_foodstuff;
@@ -156,6 +160,11 @@ global.pause=false;
             <kind>1</kind>
             <string>///CHECKS WIN STATE
 //TODO(clark): ENCAPSULATE INTO SCRIPT
+
+//I'M GROSS AND THIS IS GROSS
+audio_sound_gain(snd_gross, 0.8, 1000);
+audio_sound_gain(snd_yum, 0.2, 1000);
+audio_sound_gain(snd_smack, 0.3, 1000);
 
 if( global.ROOM_FAT &gt;= 100)
 {

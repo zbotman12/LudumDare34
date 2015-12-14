@@ -7,7 +7,11 @@
   <sounds name="sound">
     <sounds name="snd_music">
       <sound>sound\sng_maingameloop</sound>
+      <sound>sound\snd_menumusic</sound>
     </sounds>
+    <sound>sound\snd_gross</sound>
+    <sound>sound\snd_smack</sound>
+    <sound>sound\snd_yum</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_solid_data</sprite>
@@ -46,12 +50,9 @@
       <sprite>sprites\spr_fish</sprite>
     </sprites>
     <sprite>sprites\spr_strlight</sprite>
-<<<<<<< HEAD
     <sprite>sprites\spr_poisonpart</sprite>
-=======
     <sprite>sprites\spr_frame</sprite>
     <sprite>sprites\spr_gameover</sprite>
->>>>>>> 4a40f58f32bb77e95c09ee2555c7eb530a40fa7b
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -134,6 +135,8 @@
     <objects name="obj_menus">
       <object>objects\obj_menu</object>
       <object>objects\obj_winmenu</object>
+      <object>objects\obj_credits</object>
+      <object>objects\obj_buttonssel</object>
     </objects>
     <objects name="obj_uistuff">
       <object>objects\obj_poisonbar</object>

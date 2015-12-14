@@ -120,12 +120,13 @@ switch(State){
         
         if(LosingSplash.finished == true){
             with(LosingSplash){ instance_destroy(); }
-            room_goto(rm_lose_room);
+            room_goto(rm_title_screen);
         }
+        break;
     case conState.winning:
         
         audio_stop_all();
-        room_goto(rm_win_room);
+        room_goto(rm_title_screen);
         break;
 }
 
