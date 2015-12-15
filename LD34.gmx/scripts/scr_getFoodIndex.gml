@@ -8,19 +8,19 @@ if( 0 <= roll && roll <= 50 )
 {
     arri1 = 0;
 }
-if( 50 < roll && roll <= 75 )
+if( 50 < roll && roll <= 80 )
 {
     arri1 = 1;
 }
-if( 75 < roll && roll <= 85 )
+if( 80 < roll && roll <= 94 )
 {
     arri1 = 2;
 }
-if( 85 < roll && roll <= 95 )
+if( 94 < roll && roll <= 98 )
 {
     arri1 = 3;
 }
-if( 95 < roll && roll <= 100 )
+if( 98 < roll && roll <= 100 )
 {
     arri1 = 4;
 }
