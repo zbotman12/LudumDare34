@@ -30,6 +30,8 @@ butspace = 300;
 butspacey = 70;
 butspacey2 = 50;
 color = c_green;
+color2 = c_lime;
+
 butadjust = 64;
 </string>
           </argument>
@@ -57,20 +59,16 @@ butadjust = 64;
 draw_sprite(spr_xbutton, 0, x + butspace, y);
 
 //navi
-draw_text_color(x + 5 - butadjust, y + 5 + butspacey, "(Navigate!)", c_black, c_black, c_black, c_black, 0.4);
-draw_text_color(x - butadjust, y + butspacey, "(Navigate!)", c_white, c_white, color, color, 1);
+draw_text_color(x - butadjust, y + butspacey, "(Navigate!)", color2, color2, color, color, 1);
 
 //navi
-draw_text_color(x + 5 - butadjust, y + 5 + butspacey + butspacey2, "Eat!!", c_black, c_black, c_black, c_black, 0.4);
-draw_text_color(x - butadjust, y + butspacey + butspacey2, "Eat!!", c_white, c_white, color, color, 1);
+draw_text_color(x - butadjust, y + butspacey + butspacey2, "Eat!!", color2, color2, color, color, 1);
 
 //navi
-draw_text_color(x + 5 + butspace - butadjust, y + 5 + butspacey, "(Select!)", c_black, c_black, c_black, c_black, 0.4);
-draw_text_color(x + butspace - butadjust, y + butspacey, "(Select!)", c_white, c_white, color, color, 1);
+draw_text_color(x + butspace - butadjust, y + butspacey, "(Select!)", color2, color2, color, color, 1);
 
 //navi
-draw_text_color(x + 5 + butspace - butadjust, y + 5 + butspacey + butspacey2, "Slap!!", c_black, c_black, c_black, c_black, 0.4);
-draw_text_color(x + butspace - butadjust, y + butspacey + butspacey2, "Slap!!", c_white, c_white, color, color, 1);
+draw_text_color(x + butspace - butadjust, y + butspacey + butspacey2, "Slap!!", color2, color2, color, color, 1);
 
 </string>
           </argument>

@@ -30,6 +30,8 @@ mils = 0;
 secs = 0;
 mins = 0;
 
+backcol = c_silver;
+
 canupdate = false;
 
 rndstring = "";
@@ -89,7 +91,11 @@ rndstring = '0' + string(mins) + ':';
 if( secs &lt; 10){
     rndstring += '0';
 }
-rndstring += string(secs) + ':' + string(mils);
+rndstring += string(secs) + ':';
+if( mils &lt; 10){
+    rndstring += '0';
+}
+rndstring +=  + string(mils);
 </string>
           </argument>
         </arguments>
@@ -115,8 +121,11 @@ rndstring += string(secs) + ':' + string(mils);
             <string>///OVERRIDDEN DRAW FUNC
 //Does not display sprite
 draw_set_font(fnt_menu);
-draw_text_colour(x + 5, y + 5, rndstring, c_black, c_black, c_black, c_black, 0.4);
-draw_text_colour(x, y, rndstring, c_gray, c_gray, c_red, c_red, 1);
+draw_text_colour(x + 2, y, rndstring, backcol, backcol, backcol, backcol, 1);
+draw_text_colour(x - 2, y, rndstring, backcol, backcol, backcol, backcol, 1);
+draw_text_colour(x, y - 2, rndstring, backcol, backcol, backcol, backcol, 1);
+draw_text_colour(x, y + 2, rndstring, backcol, backcol, backcol, backcol, 1);
+draw_text_colour(x, y, rndstring, c_maroon, c_maroon, c_red, c_red, 1);
 </string>
           </argument>
         </arguments>

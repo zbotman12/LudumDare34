@@ -34,6 +34,8 @@ poisonMultiplier = 0;
 //  1 - good;
 bool_isgood = 0;
 
+anivar = 0;
+
 moveToX = x;
 moveToY = y;
 
@@ -84,6 +86,12 @@ if( y != moveToY ) {
         y -= global.MOVE_CONST_Y;
     }
 }
+
+anivar++;
+if(anivar &gt; 29){
+    anivar = 0;
+}
+
 </string>
           </argument>
         </arguments>
@@ -107,7 +115,7 @@ if( y != moveToY ) {
           <argument>
             <kind>1</kind>
             <string>///OVERLOADED DRAW FUNCTION
-draw_sprite_ext(sprite_index, 0, x, y, 1, 1, image_angle, c_white, image_alpha);
+draw_sprite_ext(sprite_index, 0, x + global.POS_ARRAY_FLOAT[anivar, 0], y + global.POS_ARRAY_FLOAT[anivar, 1], 1, 1, image_angle, c_white, image_alpha);
 </string>
           </argument>
         </arguments>

@@ -36,6 +36,7 @@ global.r_foodstuff[1,2] = obj_chicken;
 //RARE FOODS
 global.r_foodstuff[2,0] = obj_tbone;
 global.r_foodstuff[2,1] = obj_bone;
+global.r_foodstuff[2,2] = obj_carrot;
 //MYTHIC FOODS
 global.r_foodstuff[3,0] = obj_poishroom;
 global.r_foodstuff[3,1] = obj_velvetcake;
@@ -133,7 +134,8 @@ frame = instance_create( global.FRAME_X, global.FRAME_Y, obj_frame);
 //CREATE POSITION ARRAY
 global.POSITION_ARRAY = scr_getCosCurve(conveyor, global.SPACING_CONST, global.CURVE_AMPLITUDE);
 global.POS_ARRAY_EAT = scr_getSinCurve2(20, 300);
-global.POS_ARRAY_FLIP = scr_getSinCurve(23, 200);
+global.POS_ARRAY_FLIP = scr_getSinCurve2(23, 200);
+global.POS_ARRAY_FLOAT = scr_getSinCurve(0, 4, 12);
 //PAUSE
 global.pause=false;
 </string>

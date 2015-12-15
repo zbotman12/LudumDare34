@@ -30,7 +30,7 @@
 event_inherited();
 
 //dicks
-fatnessMultiplier = 2;
+fatnessMultiplier = 1;
 poisonMultiplier = 0;
 
 //bool member indicating what splash is placed upon eating
